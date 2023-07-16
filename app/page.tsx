@@ -1,4 +1,5 @@
-import Link from "next/link"
+import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
@@ -33,6 +34,9 @@ export default function IndexPage() {
         >
           GitHub
         </Link>
+      </div>
+      <div>
+        <UserButton afterSignOutUrl="/"/>
       </div>
     </section>
   )
