@@ -11,7 +11,9 @@
     "preview": "next build && next start",
     "typecheck": "tsc --noEmit",
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migration-push": "node -r esbuild-register migration.ts"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.21.13",
@@ -62,6 +64,8 @@
     "@typescript-eslint/parser": "^5.59.7",
     "autoprefixer": "^10.4.14",
     "drizzle-kit": "^0.19.3",
+    "esbuild": "^0.18.13",
+    "esbuild-register": "^3.4.2",
     "eslint": "^8.41.0",
     "eslint-config-next": "13.0.0",
     "eslint-config-prettier": "^8.8.0",
